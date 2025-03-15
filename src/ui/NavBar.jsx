@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Logo from "./Logo";
-import { MdMenu } from "react-icons/md";
-import { RxCross2 } from "react-icons/rx";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 export default function NavBar({ isMenuOpen, setIsMenuOpen }) {
   useEffect(() => {
@@ -13,16 +12,14 @@ export default function NavBar({ isMenuOpen, setIsMenuOpen }) {
         <div className="flex justify-between items-center font-mono h-16">
           <Logo />
 
-          <div
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-2xl absolute right-7 z-40 md:hidden cursor-pointer font-mono "
-          >
-            {isMenuOpen === true ? (
-              <RxCross2 className="icon-wrapper-menu" />
-            ) : (
-              <MdMenu className="icon-wrapper-menu" />
-            )}
-          </div>
+          {!isMenuOpen && (
+            <div
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-2xl absolute right-7 z-40 md:hidden cursor-pointer font-mono "
+            >
+              <HiOutlineMenuAlt3 />
+            </div>
+          )}
 
           <div className="flex md:flex items-center space-x-8">
             <div className="hidden md:flex items-center space-x-8">
