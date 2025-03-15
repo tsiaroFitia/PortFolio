@@ -17,3 +17,32 @@ body {
     before:duration-300 hover:before:w-full cursor-pointer;
   }
 }
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(150%);
+    }
+  }
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  .animate-blink {
+    animation: blink 3.8s step-end infinite;
+  }
+}
