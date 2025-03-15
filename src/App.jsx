@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "./ui/NavBar";
 import MobileMenu from "./ui/MobileMenu";
-import LoadingScreenAnimation from "./LoadingScreenAnimation";
+import LoadingScreenAnimation from "./ui/LoadingScreenAnimation";
+import Home from "./sections/Home";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,6 +14,8 @@ export default function App() {
       )}
       <NavBar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+
+      <Home />
     </>
   );
 }
