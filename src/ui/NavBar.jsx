@@ -37,6 +37,13 @@ export default function NavBar({ isMenuOpen, setIsMenuOpen }) {
               >
                 About
               </a>
+              {/*---------SKILLS--------- */}
+              <a
+                href="#skill"
+                className="text-gray-300 text-lg  hover:text-white transition-all menu-item"
+              >
+                Skills
+              </a>
               {/*---------PROJECTS--------- */}
               <a
                 href="#project"

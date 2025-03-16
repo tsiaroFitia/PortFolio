@@ -22,9 +22,7 @@ export default function Home() {
         </h1>
         <p className="text-lg text-gray-300 mb-8 max-w-lg mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est
-          excepturi minima cupiditate. Dolores natus, optio voluptate tempore,
-          delectus rem eum a ullam nobis cum provident? Commodi officiis ratione
-          quae;
+          excepturi minima cupiditate.
         </p>
         <div className="flex justify-center items-center space-x-4">
           <a

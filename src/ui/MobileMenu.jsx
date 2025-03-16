@@ -53,9 +53,9 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
           About
         </a>
 
-        {/*---------SERVICES--------- */}
+        {/*---------SKILLS--------- */}
         <a
-          href="#services"
+          href="#skill"
           onClick={() => setIsMenuOpen(false)}
           className={`text-2xl font-semibold text-white relative transition-transform duration-300 mb-4
             ${
@@ -65,7 +65,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
             }
           `}
         >
-          Services
+          Skills
         </a>
 
         {/*---------PROJECTS--------- */}
