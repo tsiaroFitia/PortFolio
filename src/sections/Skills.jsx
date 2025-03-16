@@ -6,10 +6,16 @@ import { motion } from "framer-motion";
 export default function Skills() {
   const [activeTabId, setActiveTabId] = useState(1);
   const [activeTabValue, setActiveTabValue] = useState("all");
+  const [visibleRows, setVisibleRows] = useState(2);
 
   const handleChangeActive = (id, value) => {
     setActiveTabId(id);
     setActiveTabValue(value);
+    setVisibleRows(2);
+  };
+
+  const handleSeeMore = () => {
+    setVisibleRows((prev) => prev + 2);
   };
 
   return (
@@ -19,10 +25,10 @@ export default function Skills() {
     >
       <div className="p-4 pt-10 mb-10 w-full rounded-lg bg-blue-950/70">
         <motion.h3
-          initial={{ opacity: 0, y: -20 }} // État initial (invisible et décalé vers le haut)
-          whileInView={{ opacity: 1, y: 0 }} // Animation lorsque l'élément entre dans la vue
-          transition={{ duration: 0.6 }} // Durée de l'animation
-          viewport={{ once: false }} // Permet de répéter l'animation à chaque défilement
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
           className="text-2xl text-center font-bold"
         >
           👜 Skills
@@ -33,10 +39,10 @@ export default function Skills() {
               <motion.span
                 onClick={() => handleChangeActive(tab.id, tab.value)}
                 key={tab.id}
-                initial={{ opacity: 0, y: 20 }} // État initial (invisible et décalé vers le bas)
-                whileInView={{ opacity: 1, y: 0 }} // Animation lorsque l'élément entre dans la vue
-                transition={{ duration: 0.4, delay: tab.id * 0.1 }} // Délai pour un effet d'apparition en cascade
-                viewport={{ once: false }} // Permet de répéter l'animation à chaque défilement
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: tab.id * 0.1 }}
+                viewport={{ once: false }}
                 className={`mr-2 md:mr-5 items-center text-center justify-center text-white cursor-pointer ${
                   activeTabId === tab.id
                     ? "bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 rounded-full"
@@ -50,16 +56,28 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Animation pour le conteneur des cartes */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }} // État initial (invisible et décalé vers le bas)
-        whileInView={{ opacity: 1, y: 0 }} // Animation lorsque l'élément entre dans la vue
-        transition={{ duration: 0.6 }} // Durée de l'animation
-        viewport={{ once: false }} // Permet de répéter l'animation à chaque défilement
-        className="w-full max-w-6xl px-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+        className="w-full max-w-4xl px-4"
       >
-        <SkillCard type={activeTabValue} />
+        <SkillCard type={activeTabValue} visibleRows={visibleRows} />
       </motion.div>
+
+      {visibleRows < 6 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          onClick={handleSeeMore}
+          className="mr-2 md:mr-5 px-7 py-3 mt-5 items-center text-center justify-center text-white cursor-pointer bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 rounded-full hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all"
+        >
+          <span>See More...</span>
+        </motion.div>
+      )}
     </section>
   );
 }
