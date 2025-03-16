@@ -4,6 +4,7 @@ import MobileMenu from "./ui/MobileMenu";
 import LoadingScreenAnimation from "./ui/LoadingScreenAnimation";
 import Home from "./sections/Home";
 import AnimationWaves from "./ui/AnimationWaves";
+import About from "./sections/About";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +19,8 @@ export default function App() {
 
       <Home />
       <AnimationWaves />
+
+      <About />
     </>
   );
 }
