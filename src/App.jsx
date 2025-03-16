@@ -5,6 +5,7 @@ import LoadingScreenAnimation from "./ui/LoadingScreenAnimation";
 import Home from "./sections/Home";
 import AnimationWaves from "./ui/AnimationWaves";
 import About from "./sections/About";
+import Skills from "./sections/Skills";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,6 +22,8 @@ export default function App() {
       <AnimationWaves />
 
       <About />
+
+      <Skills />
     </>
   );
 }
