@@ -7,6 +7,7 @@ import AnimationWaves from "./ui/AnimationWaves";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,6 +28,7 @@ export default function App() {
       <Skills />
 
       <Contact />
+      <Footer />
     </>
   );
 }
