@@ -6,7 +6,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 export default function Home() {
   return (
     <section
-      id="#home"
+      id="home"
       className="min-h-screen flex flex-col justify-center items-center lg:flex-row-reverse gap-9 lg:gap-15"
     >
       <div className="text-center z-10 px-4">
@@ -21,8 +21,9 @@ export default function Home() {
           Hi, I'm Fitia Rajohnson
         </h1>
         <p className="text-lg text-gray-300 mb-8 max-w-lg mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis est
-          excepturi minima cupiditate.
+          Passionate web and mobile developer, currently honing my skills as a
+          student, dedicated to crafting innovative and user-centric digital
+          experiences.
         </p>
         <div className="flex justify-center items-center space-x-4">
           <a

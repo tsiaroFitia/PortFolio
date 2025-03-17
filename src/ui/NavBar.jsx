@@ -39,14 +39,14 @@ export default function NavBar({ isMenuOpen, setIsMenuOpen }) {
               </a>
               {/*---------SKILLS--------- */}
               <a
-                href="#skill"
+                href="#skills"
                 className="text-gray-300 text-lg  hover:text-white transition-all menu-item"
               >
                 Skills
               </a>
               {/*---------PROJECTS--------- */}
               <a
-                href="#project"
+                href="#projects"
                 className="text-gray-300 text-lg  hover:text-white transition-all menu-item"
               >
                 Projects
