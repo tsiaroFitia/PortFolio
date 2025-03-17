@@ -1,10 +1,3 @@
-export const SKILLS_TAB = [
-  { id: 1, label: "All", value: "all" },
-  { id: 2, label: "Frontend", value: "frontend" },
-  { id: 3, label: "Backend", value: "backend" },
-  { id: 4, label: "Tools", value: "tools" },
-  { id: 5, label: "Skills", value: "skills" },
-];
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandTailwind } from "react-icons/tb";
 import { SiPython, SiUml, SiFigma, SiSqlite } from "react-icons/si";
@@ -13,6 +6,17 @@ import { FaTable } from "react-icons/fa6";
 import { DiVisualstudio } from "react-icons/di";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
+import project1 from "../assets/project1.jpg";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.jpg";
+
+export const SKILLS_TAB = [
+  { id: 1, label: "All", value: "all" },
+  { id: 2, label: "Frontend", value: "frontend" },
+  { id: 3, label: "Backend", value: "backend" },
+  { id: 4, label: "Tools", value: "tools" },
+  { id: 5, label: "Skills", value: "skills" },
+];
 export const SKILLS = [
   { id: 1, icon: FaHtml5, skill: "HTML", progress: 70, type: "frontend" },
   { id: 2, icon: FaCss3Alt, skill: "CSS", progress: 70, type: "frontend" },
@@ -57,4 +61,25 @@ export const SKILLS = [
     type: "tools",
   },
   { id: 13, icon: SiSqlite, skill: "SQL Server", progress: 65, type: "tools" },
+];
+
+export const PROJECTS = [
+  {
+    id: 1,
+    img: project1,
+    description: " Lorem ",
+    langage: ["React", "Vite", "Tailwind CSS", "SQL"],
+  },
+  {
+    id: 2,
+    img: project2,
+    description: " Lorem ",
+    langage: ["C#", "WindowsForms", "SQL"],
+  },
+  {
+    id: 3,
+    img: project3,
+    description: " Lorem ",
+    langage: ["React", "Vite", "Tailwind CSS", "SQL"],
+  },
 ];

@@ -8,6 +8,7 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import Projects from "./sections/Projects";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +27,7 @@ export default function App() {
       <About />
 
       <Skills />
-
+      <Projects />
       <Contact />
       <Footer />
     </>
