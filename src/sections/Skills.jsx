@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 export default function Skills() {
   const [activeTabId, setActiveTabId] = useState(1);
   const [activeTabValue, setActiveTabValue] = useState("all");
-  const [visibleRows, setVisibleRows] = useState(2);
+  const [visibleRows, setVisibleRows] = useState(1);
 
   const handleChangeActive = (id, value) => {
     setActiveTabId(id);
     setActiveTabValue(value);
-    setVisibleRows(2);
+    setVisibleRows(1);
   };
 
   const handleSeeMore = () => {
-    setVisibleRows((prev) => prev + 2);
+    setVisibleRows((prev) => prev + 1);
   };
 
   return (
@@ -66,14 +66,16 @@ export default function Skills() {
         <SkillCard type={activeTabValue} visibleRows={visibleRows} />
       </motion.div>
 
-      {visibleRows < 6 && (
+      {visibleRows < 4 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
           onClick={handleSeeMore}
-          className="mr-2 md:mr-5 px-7 py-3 mt-5 items-center text-center justify-center text-white cursor-pointer bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 rounded-full hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all"
+          className="mr-2 md:mr-5 px-7 py-3 mt-5 items-center text-center justify-center
+           text-white cursor-pointer bg-gradient-to-r from-teal-400 via-blue-500 to-indigo-600 rounded-full 
+           hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all"
         >
           <span>See More...</span>
         </motion.div>
